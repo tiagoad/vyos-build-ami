@@ -53,12 +53,12 @@
       register: security_group
 
     # Look up the AMI id to use based on a search
-    - name: Look up Debian Jessie AMI
+    - name: Look up Debian Stretch AMI
       ec2_ami_facts:
         owners: 379101102735
         region: "{{ ec2_region }}"
         filters:
-          name: "debian-jessie-amd64-hvm-*"
+          name: "debian-stretch-hvm-*"
           architecture: "x86_64"
           hypervisor: "xen"
           "root-device-type": "ebs"
